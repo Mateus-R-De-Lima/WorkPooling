@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36401.2 d17.14
+VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -12,6 +12,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D0F835A8-3784-404E-83F6-FF2574324671}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkPooling.Services", "WorkPooling.Services\WorkPooling.Services.csproj", "{305B6C9E-CD57-4A8D-B536-EB1519DABC26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkPooling.Hangfire", "WorkPooling.Hangfire\WorkPooling.Hangfire.csproj", "{0AF50DD2-5DB8-4619-96FD-9E7A2E59F0D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{452DE099-10FA-4CEA-B70C-4E6280FB747D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkPooling.Redis", "WorkPooling.Redis\WorkPooling.Redis.csproj", "{363CF3A7-14E5-4997-96A7-3E04D341CBC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +37,14 @@ Global
 		{305B6C9E-CD57-4A8D-B536-EB1519DABC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{305B6C9E-CD57-4A8D-B536-EB1519DABC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{305B6C9E-CD57-4A8D-B536-EB1519DABC26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AF50DD2-5DB8-4619-96FD-9E7A2E59F0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF50DD2-5DB8-4619-96FD-9E7A2E59F0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF50DD2-5DB8-4619-96FD-9E7A2E59F0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF50DD2-5DB8-4619-96FD-9E7A2E59F0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{363CF3A7-14E5-4997-96A7-3E04D341CBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{363CF3A7-14E5-4997-96A7-3E04D341CBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{363CF3A7-14E5-4997-96A7-3E04D341CBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{363CF3A7-14E5-4997-96A7-3E04D341CBC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +53,8 @@ Global
 		{815572BF-C82F-409C-B4D6-7C4A56CC7A67} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{D6E76313-5B2B-411E-B9D6-B4E3E86E20B2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{305B6C9E-CD57-4A8D-B536-EB1519DABC26} = {D0F835A8-3784-404E-83F6-FF2574324671}
+		{0AF50DD2-5DB8-4619-96FD-9E7A2E59F0D2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{363CF3A7-14E5-4997-96A7-3E04D341CBC9} = {452DE099-10FA-4CEA-B70C-4E6280FB747D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F081D59-B581-47B1-BEEB-8E426984B93C}

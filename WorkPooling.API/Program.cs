@@ -1,6 +1,10 @@
+using Hangfire;
 using Quartz;
+using WorkPooling.Hangfire;
 using WorkPooling.Quartz;
+using WorkPooling.Redis;
 using WorkPooling.Services;
+using ConsumeThirdPartyApiJob = WorkPooling.Hangfire.ConsumeThirdPartyApiJob;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,10 +17,20 @@ builder.Services.AddOpenApi();
 // HttpClient (para o Job)
 builder.Services.AddHttpClient();
 
-builder.Services.AddConfigQuartz();
+// Configuração do Quartz via extensão
+//builder.Services.AddConfigQuartz();
 
+// Configuração do Hangfire via extensão
+builder.Services.AddConfigHangfire(builder.Configuration);
 
 builder.Services.AddScoped<IAdviceSlipServices, AdviceSlipServices>();
+
+builder.Services.AddScoped<IRedisShared, RedisShared>();
+
+//Redis
+builder.Services.AddScoped<IRedisService, RedisService>();
+
+builder.Services.AddScoped<IConsumeThirdPartyApiJob, ConsumeThirdPartyApiJob>();
 
 
 var app = builder.Build();
@@ -33,5 +47,9 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+// Agendamento dos jobs via extensão
+app.ConfigureJobs();
+// Dashboard Hangfire
+app.UseHangfireDashboard("/hangfire");
 
 app.Run();

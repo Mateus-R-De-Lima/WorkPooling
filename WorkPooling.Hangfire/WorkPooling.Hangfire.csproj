@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.8.21" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.21" />
+    <PackageReference Include="Hangfire.Redis.StackExchange" Version="1.12.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.9" />
+    <PackageReference Include="StackExchange.Redis" Version="2.9.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WorkPooling.Redis\WorkPooling.Redis.csproj" />
+    <ProjectReference Include="..\WorkPooling.Services\WorkPooling.Services.csproj" />
+  </ItemGroup>
+
+</Project>
